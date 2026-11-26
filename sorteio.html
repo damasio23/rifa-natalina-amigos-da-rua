@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Escolha seus números · Sorteio Natalino Amig@s da Rua</title>
+<meta name="description" content="Escolha seus números de 1 a 200, informe seu nome e pague por PIX.">
+<meta name="theme-color" content="#1273b8">
+<meta property="og:title" content="Sorteio Natalino Luiz Manni Amig@s da Rua">
+<meta property="og:description" content="Cada número custa R$ 10 e ajuda nas ações de Natal. Participe!">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="sorteio">
+<div id="faixa-teste" class="faixa-teste" hidden>Modo de teste local: os dados ficam só neste navegador. Configure o Firebase em config.js.</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html"><img src="assets/logo.png" alt="Logo Luiz Manni Amigos da Rua"><span>Sorteio Natalino<br>Amig@s da Rua</span></a>
+  <nav class="menu" aria-label="Principal">
+    <a href="index.html">Início</a>
+    <a href="sorteio.html" class="on">Números</a>
+    <a href="participantes.html">Preenchidos</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="pagina-topo"><div class="wrap">
+  <h1 style="font-size:clamp(1.8rem,6vw,2.6rem)">Escolha seus números</h1>
+  <div class="etapas" aria-hidden="true"><span id="et1" class="on">1 · Números</span><span id="et2">2 · Pagamento</span><span id="et3">3 · Pronto</span></div>
+</div></div>
+
+<section style="padding-top:12px"><div class="wrap">
+
+<div id="passo1">
+  <p style="margin-top:0">Toque nos números que quiser. Cada um custa <strong>R$ 10,00</strong>.</p>
+  <div class="legenda"><span><i class="leg-livre"></i>Disponível</span><span><i class="leg-sel"></i>Selecionado</span><span><i class="leg-ocup"></i>Já preenchido</span></div>
+  <div class="resumo-topo" style="margin-bottom:14px"><span class="chip" id="c-livres">…</span><span class="chip" id="c-ocup">…</span></div>
+  <div id="grade" class="grade" aria-label="Números de 1 a 200"></div>
+</div>
+
+<div id="passo2" hidden>
+  <div class="pag">
+    <div class="painel">
+      <h2 style="font-size:1.5rem">Confira seu pedido</h2>
+      <ul class="linhas">
+        <li><span>Nome</span><strong id="r-nome"></strong></li>
+        <li><span>Números</span><strong id="r-nums" style="text-align:right"></strong></li>
+        <li><span>Quantidade</span><strong id="r-qtd"></strong></li>
+        <li><span>Valor total</span><strong class="total" id="r-total"></strong></li>
+      </ul>
+      <div class="aviso">Pague exatamente o valor total pelo PIX e envie o comprovante a um integrante dos Amigos da Rua, por gentileza.</div>
+    </div>
+    <div class="painel centro">
+      <h2 style="font-size:1.5rem">Pague com PIX</h2>
+      <img class="qr" src="assets/pix-qrcode.jpg" alt="QR Code PIX Rifa Amigos da Rua" width="360">
+      <p style="margin:12px 0 4px"><strong>Ou use a chave PIX (e-mail):</strong></p>
+      <div class="chave"><span id="chave">amigosdarua.cdm@gmail.com</span><button class="btn btn-ghost btn-sm" id="copiar" type="button">Copiar</button></div>
+      <ol style="text-align:left;padding-left:20px;margin:12px 0 0">
+        <li>Abra o app do seu banco e escolha <strong>PIX</strong>.</li>
+        <li>Leia o QR Code ou cole a chave.</li>
+        <li>Pague o valor total: <strong id="r-total2"></strong>.</li>
+        <li>Depois toque em <strong>Confirmar minha participação</strong>.</li>
+      </ol>
+    </div>
+  </div>
+  <p id="erro2" class="erro" role="alert"></p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+    <button class="btn btn-ghost" id="voltar" type="button">← Voltar</button>
+    <button class="btn btn-sol" id="confirmar" type="button">Confirmar minha participação</button>
+  </div>
+</div>
+
+<div id="passo3" hidden>
+  <div class="painel sucesso" style="max-width:640px;margin:0 auto">
+    <div class="ok">✓</div>
+    <h2>Participação registrada!</h2>
+    <p>Obrigado, <strong id="s-nome"></strong>! Seus números já aparecem como preenchidos:</p>
+    <div class="tags" id="s-nums"></div>
+    <p>Total: <strong id="s-total"></strong></p>
+    <div class="aviso" style="text-align:left">📲 Falta só um passo: envie o <strong>comprovante do PIX</strong> para algum dos integrantes dos Amigos da Rua, por gentileza, para conferirmos o pagamento.</div>
+    <p style="margin-top:18px"><a class="btn btn-azul" href="participantes.html">Ver números preenchidos</a> <a class="btn btn-ghost" href="sorteio.html">Escolher mais números</a></p>
+  </div>
+</div>
+
+</div></section>
+</main>
+
+<div id="barra" class="barra"><div class="wrap">
+  <div class="tot"><span id="b-qtd">0 números</span> · <b id="b-total">R$ 0</b><small id="b-nums"></small></div>
+  <div style="display:flex;gap:8px;align-items:center;flex:1;min-width:260px;justify-content:flex-end;flex-wrap:wrap">
+    <div style="flex:1;min-width:170px;max-width:320px"><label class="sr" for="nome">Seu nome</label><input id="nome" type="text" placeholder="Seu nome completo" autocomplete="name" maxlength="80"></div>
+    <button class="btn btn-sol" id="continuar" type="button">Pagar →</button>
+  </div>
+  <p id="erro1" class="erro" style="width:100%;margin:0" role="alert"></p>
+</div></div>
+
+<footer class="rodape"><div class="wrap">
+  <img src="assets/logo.png" alt="">
+  <p><strong>Luiz Manni Amig@s da Rua</strong><br>Sorteio Natalino · cada número custa R$ 10,00</p>
+  <p>Dúvidas? Fale com qualquer integrante dos Amigos da Rua.</p>
+</div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="dados-iniciais.js"></script>
+<script src="dados.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

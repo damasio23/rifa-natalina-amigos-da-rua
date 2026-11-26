@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Números preenchidos · Sorteio Natalino Amig@s da Rua</title>
+<meta name="description" content="Lista pública dos 200 números e seus participantes.">
+<meta name="theme-color" content="#1273b8">
+<meta property="og:title" content="Sorteio Natalino Luiz Manni Amig@s da Rua">
+<meta property="og:description" content="Cada número custa R$ 10 e ajuda nas ações de Natal. Participe!">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="part">
+<div id="faixa-teste" class="faixa-teste" hidden>Modo de teste local: os dados ficam só neste navegador. Configure o Firebase em config.js.</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html"><img src="assets/logo.png" alt="Logo Luiz Manni Amigos da Rua"><span>Sorteio Natalino<br>Amig@s da Rua</span></a>
+  <nav class="menu" aria-label="Principal">
+    <a href="index.html">Início</a>
+    <a href="sorteio.html">Números</a>
+    <a href="participantes.html" class="on">Preenchidos</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="pagina-topo"><div class="wrap">
+  <h1 style="font-size:clamp(1.8rem,6vw,2.6rem)">Números preenchidos</h1>
+  <div class="resumo-topo"><span class="chip" id="c-ocup">…</span><span class="chip" id="c-livres">…</span></div>
+</div></div>
+<section style="padding-top:8px"><div class="wrap">
+  <div class="ferramentas">
+    <label class="sr" for="busca">Buscar</label>
+    <input id="busca" type="search" placeholder="Buscar por número ou nome">
+    <div class="seg" role="group" aria-label="Filtro">
+      <button data-f="todos" class="on">Todos (200)</button><button data-f="ocup">Preenchidos</button><button data-f="livre">Disponíveis</button>
+    </div>
+  </div>
+  <table class="tabela"><thead><tr><th>Número</th><th>Participante</th></tr></thead><tbody id="tbody"></tbody></table>
+  <p class="centro" style="margin-top:22px"><a class="btn btn-sol" href="sorteio.html">Escolher meus números</a></p>
+</div></section>
+</main>
+
+<footer class="rodape"><div class="wrap">
+  <img src="assets/logo.png" alt="">
+  <p><strong>Luiz Manni Amig@s da Rua</strong><br>Sorteio Natalino · cada número custa R$ 10,00</p>
+  <p>Dúvidas? Fale com qualquer integrante dos Amigos da Rua.</p>
+</div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="dados-iniciais.js"></script>
+<script src="dados.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

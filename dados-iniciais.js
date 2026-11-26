@@ -1,0 +1,26 @@
+// Participantes iniciais (números 1–200; os demais estão disponíveis).
+window.PARTICIPANTES_INICIAIS = {
+  "2": "Ricardo Lima",
+  "7": "Valéria Abramovitz",
+  "8": "Valéria Abramovitz",
+  "10": "Ana Flávia",
+  "12": "Valéria Abramovitz",
+  "14": "Saudade",
+  "15": "Saudade",
+  "16": "Saudade",
+  "18": "Valéria Abramovitz",
+  "19": "Ana Flávia",
+  "20": "Saudade",
+  "22": "Valéria Abramovitz",
+  "24": "Ricardo Lima",
+  "25": "Ricardo Lima",
+  "26": "Ricardo Lima",
+  "27": "Valéria Abramovitz",
+  "30": "Saudade",
+  "70": "André Camilo",
+  "71": "André Camilo",
+  "72": "André Camilo",
+  "73": "André Camilo",
+  "74": "André Camilo",
+  "99": "Ricardo Lima"
+};

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Administração · Amig@s da Rua</title>
+<link rel="icon" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+<div id="faixa-teste" class="faixa-teste" hidden>Modo de teste local (senha: admin). Configure o Firebase em config.js.</div>
+
+<main id="login" class="wrap login" hidden>
+  <div class="painel">
+    <img src="assets/logo.png" alt="" style="width:90px;margin:0 auto 8px">
+    <h2 class="centro" style="font-size:1.6rem">Área restrita</h2>
+    <form id="f-login">
+      <div id="campo-email"><label for="email">E-mail</label><input id="email" type="email" autocomplete="username"><br><br></div>
+      <label for="senha">Senha</label><input id="senha" type="password" autocomplete="current-password" required>
+      <p id="erro-login" class="erro" role="alert"></p>
+      <button class="btn btn-azul" style="width:100%" type="submit">Entrar</button>
+    </form>
+  </div>
+</main>
+
+<div id="painel" hidden>
+<header class="topo"><div class="wrap">
+  <span class="marca"><img src="assets/logo.png" alt=""><span>Administração</span></span>
+  <button class="btn btn-ghost btn-sm" id="sair" type="button">Sair</button>
+</div></header>
+<main class="wrap" style="padding:24px 0 60px">
+  <div class="resumo-topo" style="margin-bottom:16px"><span class="chip" id="c-ocup"></span><span class="chip" id="c-livres"></span><span class="chip" id="c-pagos"></span><span class="chip" id="c-total"></span></div>
+  <div id="aviso-import" class="aviso" style="margin-bottom:16px" hidden>A lista inicial ainda não foi gravada no banco de dados. <button class="btn btn-sol btn-sm" id="importar" type="button">Importar lista inicial</button></div>
+
+  <div class="admin-grid">
+    <section class="painel sorteio-box" style="padding:22px">
+      <h2 style="font-size:1.6rem">Sorteio dos prêmios</h2>
+      <p class="sub" style="margin-bottom:0">Só participam números preenchidos. Um número sorteado não é sorteado de novo.</p>
+      <div id="visor" class="visor"><div class="nome" id="v-premio">Escolha o prêmio</div><div class="n" id="v-num">?</div><div class="nome" id="v-nome">&nbsp;</div></div>
+      <ul id="res" class="res" style="text-align:left"></ul>
+    </section>
+
+    <section class="painel">
+      <h2 style="font-size:1.6rem">Todos os números</h2>
+      <div class="legenda"><span><i class="leg-livre"></i>Livre</span><span><i class="leg-sel"></i>Preenchido</span><span><i style="background:var(--natal);border-color:var(--natal)"></i>Sorteado</span></div>
+      <div id="mini" class="mini-grade"></div>
+    </section>
+  </div>
+
+  <section style="padding:30px 0 0">
+    <h2 style="font-size:1.6rem">Participantes</h2>
+    <div class="ferramentas"><input id="busca" type="search" placeholder="Buscar por número ou nome"><button class="btn btn-ghost btn-sm" id="csv" type="button">Baixar CSV</button></div>
+    <div style="overflow-x:auto"><table class="tabela"><thead><tr><th>Nº</th><th>Participante</th><th>Pago</th><th></th></tr></thead><tbody id="tbody"></tbody></table></div>
+  </section>
+</main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="config.js"></script>
+<script src="dados-iniciais.js"></script>
+<script src="dados.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

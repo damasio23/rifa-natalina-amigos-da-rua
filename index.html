@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sorteio Natalino Luiz Manni Amig@s da Rua</title>
+<meta name="description" content="Participe do Sorteio Natalino dos Amigos da Rua: 200 números a R$ 10,00 que ajudam nas ações de Natal.">
+<meta name="theme-color" content="#1273b8">
+<meta property="og:title" content="Sorteio Natalino Luiz Manni Amig@s da Rua">
+<meta property="og:description" content="Cada número custa R$ 10 e ajuda nas ações de Natal. Participe!">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<div id="faixa-teste" class="faixa-teste" hidden>Modo de teste local: os dados ficam só neste navegador. Configure o Firebase em config.js.</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html"><img src="assets/logo.png" alt="Logo Luiz Manni Amigos da Rua"><span>Sorteio Natalino<br>Amig@s da Rua</span></a>
+  <nav class="menu" aria-label="Principal">
+    <a href="index.html" class="on">Início</a>
+    <a href="sorteio.html">Números</a>
+    <a href="participantes.html">Preenchidos</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="estrelas" aria-hidden="true"><i style="left:6%;top:14%;font-size:18px">✦</i><i style="left:18%;top:70%;font-size:12px">✧</i><i style="left:44%;top:9%;font-size:14px">✦</i><i style="left:60%;top:80%;font-size:16px">✧</i><i style="left:90%;top:30%;font-size:20px">✦</i><i style="left:75%;top:8%;font-size:12px">✧</i><i style="left:30%;top:40%;font-size:10px">✦</i></div>
+  <div class="wrap">
+    <div>
+      <span class="selo">NATAL SOLIDÁRIO</span>
+      <h1>Sorteio Natalino<br>Luiz Manni Amig@s da Rua</h1>
+      <p class="lead">Cada número que você escolhe vira ceia, abraço e presença nas ações de Natal dos Amigos da Rua. E ainda concorre a quatro prêmios feitos com carinho.</p>
+      <div class="valor"><span>cada número</span><b>R$ 10,00</b></div><br>
+      <a class="btn btn-sol" href="sorteio.html">Escolher meus números →</a>
+      <p id="progresso" class="chip" style="display:inline-block;margin-top:16px" hidden></p>
+    </div>
+    <img class="hero-logo" src="assets/logo.png" alt="Mãos abertas sob o sol e o nome Luiz Manni Amigos da Rua">
+  </div>
+</section>
+
+<section class="faixa"><div class="wrap">
+  <h2 class="centro">Como participar</h2>
+  <p class="sub centro">Leva menos de dois minutos, direto do celular.</p>
+  <div class="passos">
+    <div class="passo"><h3>Escolha</h3><p>Toque nos números livres que quiser, de 1 a 200.</p></div>
+    <div class="passo"><h3>Identifique-se</h3><p>Informe o nome de quem está comprando.</p></div>
+    <div class="passo"><h3>Pague no PIX</h3><p>R$ 10 por número, pelo QR Code ou pela chave.</p></div>
+    <div class="passo"><h3>Envie o comprovante</h3><p>Mande o comprovante a um integrante dos Amigos da Rua.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="centro">Os 4 prêmios</h2>
+  <p class="sub centro">Quatro números serão sorteados, um para cada prêmio.</p>
+  <div class="premios" id="premios"></div>
+</div></section>
+
+<section class="faixa"><div class="wrap causa">
+  <div>
+    <h2>Para onde vai o seu dinheiro</h2>
+    <p>O <strong>Luiz Manni Amig@s da Rua</strong> é um grupo de pessoas que se dedica a quem vive nas ruas. Tudo o que for arrecadado neste sorteio vai <strong>diretamente para as ações de Natal</strong>: alimentos, kits e o encontro de fim de ano.</p>
+    <p>Participar é gostoso, e é solidário.</p>
+  </div>
+  <div class="cartao">
+    <h3>Seu número faz a diferença</h3>
+    <p>1 número = R$ 10 · 2 números = R$ 20 · 3 números = R$ 30…</p>
+    <p style="margin-top:16px"><a class="btn btn-sol" href="sorteio.html">Quero participar</a></p>
+  </div>
+</div></section>
+</main>
+
+<footer class="rodape"><div class="wrap">
+  <img src="assets/logo.png" alt="">
+  <p><strong>Luiz Manni Amig@s da Rua</strong><br>Sorteio Natalino · cada número custa R$ 10,00</p>
+  <p>Dúvidas? Fale com qualquer integrante dos Amigos da Rua.</p>
+</div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="dados-iniciais.js"></script>
+<script src="dados.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

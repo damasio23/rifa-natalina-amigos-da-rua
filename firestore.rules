@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAdmin() {
+      return request.auth != null &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Um documento por número (id = "1".."200"). Qualquer pessoa pode LER e CRIAR
+    // (criar falha se o número já existe => nunca há dois donos). Só o admin altera/apaga.
+    match /numeros/{num} {
+      allow read: if true;
+      allow create: if num.matches('^([1-9]|[1-9][0-9]|1[0-9][0-9]|200)$')
+        && request.resource.data.keys().hasOnly(['nome', 'criado', 'pago'])
+        && request.resource.data.nome is string
+        && request.resource.data.nome.size() >= 2
+        && request.resource.data.nome.size() <= 80
+        && request.resource.data.pago == false
+        && request.resource.data.criado == request.time;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Resultado do sorteio: somente o admin.
+    match /sorteio/{id} {
+      allow read, write: if isAdmin();
+    }
+
+    // Marca que a lista inicial já foi importada para o banco.
+    match /meta/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // /admins/{uid}: criado manualmente no console do Firebase (ninguém escreve por aqui).
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
