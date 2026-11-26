@@ -7,7 +7,7 @@ Site estático (HTML/CSS/JS) + Firebase Firestore (dados compartilhados e persis
 2. Em *Firestore → Regras*, colar o conteúdo de `firestore.rules` e publicar.
 3. *Authentication → Usuários → Adicionar* (e-mail e senha do administrador). Copie o **UID** do usuário e, no Firestore, crie o documento `admins/<UID>` (qualquer campo, ex.: `ativo: true`).
 4. *Configurações do projeto → Seus apps → Web* → copie a config para `config.js` (`window.FIREBASE_CONFIG = {...}`).
-5. **GitHub Pages**: Settings → Pages → Source: *GitHub Actions*; faça merge na `main` (o workflow publica).
+5. **GitHub Pages**: Settings → Pages → Source: *Deploy from a branch* → `main` / (root).
 6. Abra `/admin.html`, entre e clique em **Importar lista inicial** (grava os participantes iniciais no banco).
 
 ## Segurança
