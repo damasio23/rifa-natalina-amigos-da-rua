@@ -97,4 +97,14 @@
     document.querySelectorAll(".seg button").forEach((b) => (b.onclick = () => { document.querySelectorAll(".seg button").forEach((x) => x.classList.remove("on")); b.classList.add("on"); filtro = b.dataset.f; desenhar(); }));
     D.watchNumbers((m) => { mapa = m; desenhar(); });
   }
+
+  // ---------- ações (galeria com ampliação) ----------
+  if (page === "acoes") {
+    const links = [...document.querySelectorAll("#galeria .foto")], lb = $("#lb"), img = $("#lb-img"); let i = 0;
+    const abrir = (n) => { i = (n + links.length) % links.length; img.src = links[i].href; if (!lb.open) lb.showModal(); };
+    links.forEach((a, n) => a.addEventListener("click", (e) => { e.preventDefault(); abrir(n); }));
+    $("#lb-x").onclick = () => lb.close(); $("#lb-p").onclick = () => abrir(i - 1); $("#lb-n").onclick = () => abrir(i + 1);
+    lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+    lb.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") abrir(i - 1); if (e.key === "ArrowRight") abrir(i + 1); });
+  }
 })();

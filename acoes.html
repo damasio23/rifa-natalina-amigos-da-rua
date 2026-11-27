@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nossas ações · Sorteio Natalino Amig@s da Rua</title>
+<meta name="description" content="Conheça as ações do Luiz Manni Amig@s da Rua nas ruas.">
+<meta name="theme-color" content="#1273b8">
+<meta property="og:title" content="Sorteio Natalino Luiz Manni Amig@s da Rua">
+<meta property="og:description" content="Cada número custa R$ 10 e ajuda nas ações de Natal. Participe!">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="acoes">
+<div id="faixa-teste" class="faixa-teste" hidden>Modo de teste local: os dados ficam só neste navegador. Configure o Firebase em config.js.</div>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="index.html"><img src="assets/logo.png" alt="Logo Luiz Manni Amigos da Rua"><span>Sorteio Natalino<br>Amig@s da Rua</span></a>
+  <nav class="menu" aria-label="Principal">
+    <a href="index.html">Início</a>
+    <a href="sorteio.html">Números</a>
+    <a href="participantes.html">Preenchidos</a>
+      <a href="acoes.html" class="on">Ações</a>
+  </nav>
+</div></header>
+
+<main>
+<div class="pagina-topo"><div class="wrap">
+  <h1 style="font-size:clamp(1.8rem,6vw,2.6rem)">Nossas ações</h1>
+  <p style="max-width:40em">O <strong>Luiz Manni Amig@s da Rua</strong> leva comida, calçados, afeto e encontro a quem vive nas ruas. Estes são alguns momentos do nosso trabalho.</p>
+</div></div>
+<section style="padding-top:20px"><div class="wrap">
+  <div class="galeria" id="galeria">
+<a class="foto" href="assets/acoes/acao01.jpg" data-i="0"><img src="assets/acoes/acao01.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao02.jpg" data-i="1"><img src="assets/acoes/acao02.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao03.jpg" data-i="2"><img src="assets/acoes/acao03.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao04.jpg" data-i="3"><img src="assets/acoes/acao04.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao05.jpg" data-i="4"><img src="assets/acoes/acao05.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao06.jpg" data-i="5"><img src="assets/acoes/acao06.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao07.jpg" data-i="6"><img src="assets/acoes/acao07.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao08.jpg" data-i="7"><img src="assets/acoes/acao08.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao09.jpg" data-i="8"><img src="assets/acoes/acao09.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+<a class="foto" href="assets/acoes/acao10.jpg" data-i="9"><img src="assets/acoes/acao10.jpg" alt="Ação do Luiz Manni Amig@s da Rua" loading="lazy"></a>
+  </div>
+  <div class="aviso" style="margin-top:28px">🎄 <strong>Neste Natal:</strong> com o dinheiro do sorteio vamos comprar <strong>100 pares de chinelos novos</strong> para distribuir nas ruas, além de <strong>quentinhas de ceia</strong> e <strong>brinquedos</strong> para crianças em vulnerabilidade social.</div>
+  <p class="centro" style="margin-top:22px"><a class="btn btn-sol" href="sorteio.html">Escolher meus números</a></p>
+</div></section>
+</main>
+<dialog id="lb" aria-label="Foto ampliada"><button id="lb-x" type="button" aria-label="Fechar">✕</button><button id="lb-p" type="button" aria-label="Anterior">‹</button><img id="lb-img" alt=""><button id="lb-n" type="button" aria-label="Próxima">›</button></dialog>
+<footer class="rodape"><div class="wrap">
+  <img src="assets/logo.png" alt="">
+  <p><strong>Luiz Manni Amig@s da Rua</strong><br>Sorteio Natalino · cada número custa R$ 10,00</p>
+  <p>Dúvidas? Fale com qualquer integrante dos Amigos da Rua.</p>
+</div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="dados-iniciais.js"></script>
+<script src="dados.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
