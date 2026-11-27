@@ -14,7 +14,12 @@
   // ---------- início ----------
   if (page === "home") {
     const box = $("#premios");
-    R.premios.forEach((p) => { const c = el("div", "premio"); c.append(el("div", "ico", p.icone)); const d = el("div"); d.append(el("small", null, p.n + "º prêmio"), el("strong", null, p.titulo)); c.append(d); box.append(c); });
+    R.premios.forEach((p) => {
+      const c = el("div", "premio");
+      const fig = el("div", "foto"); const im = el("img"); im.src = p.img; im.alt = p.titulo; im.loading = "lazy"; im.width = 640; im.height = 640; fig.append(im);
+      if (p.ilustrativo) fig.append(el("span", "ilus", "Imagem ilustrativa"));
+      const d = el("div", "txt"); d.append(el("small", null, p.n + "º prêmio"), el("strong", null, p.titulo)); c.append(fig, d); box.append(c);
+    });
     D.watchNumbers((m) => { mapa = m; const { o } = contar(); const p = $("#progresso"); p.hidden = false; p.textContent = o + " de " + R.total + " números já escolhidos"; });
   }
 

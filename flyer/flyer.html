@@ -1,0 +1,43 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1080px;height:1350px;font-family:Nunito,sans-serif;color:#2a2a33;overflow:hidden;position:relative;background:linear-gradient(180deg,#bfe0f5 0%,#e6f3fb 34%,#fffaf0 62%)}
+.sol{position:absolute;width:900px;height:900px;right:-300px;top:-380px;border-radius:50%;background:radial-gradient(circle,#fff2a8 0%,rgba(255,242,168,0) 68%)}
+.st{position:absolute;color:#fff;text-shadow:0 0 10px #fff}
+header{position:relative;display:flex;align-items:center;gap:30px;padding:44px 64px 0}
+header img{width:190px;height:190px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(18,115,184,.25))}
+.selo{display:inline-block;background:#c0392b;color:#fff;font:800 24px Nunito;letter-spacing:.08em;padding:6px 20px;border-radius:999px}
+h1{font:800 76px/.98 "Baloo 2";color:#0b4f86;margin-top:10px}
+h1 span{color:#1273b8;font-size:50px;display:block;font-weight:700;margin-top:4px}
+.preco{position:relative;margin:26px 64px 0;display:flex;align-items:center;justify-content:space-between;background:#fff;border:4px dashed #f6c933;border-radius:28px;padding:14px 34px}
+.preco p{font:700 34px/1.15 Nunito}.preco b{font:800 92px/1 "Baloo 2";color:#8a4e1f}
+.preco em{font-style:normal;font:800 28px Nunito;color:#0b4f86;display:block;text-align:right}
+.titulo{position:relative;text-align:center;font:800 46px "Baloo 2";color:#0b4f86;margin:70px 0 30px}
+.grade{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0 64px}
+.p{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(18,115,184,.2);border-top:8px solid #f6c933}
+.p:nth-child(2){border-color:#2f9a93}.p:nth-child(3){border-color:#1273b8}.p:nth-child(4){border-color:#8a4e1f}
+.p img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.p div{padding:10px 12px 14px;text-align:center}
+.p small{display:block;font:800 20px Nunito;color:#8a4e1f;text-transform:uppercase;letter-spacing:.05em}
+.p strong{font:700 27px/1.12 "Baloo 2";color:#0b4f86;display:block;margin-top:2px}
+.p.k strong{font-size:21px}
+footer{position:absolute;left:0;right:0;bottom:0;height:300px;background:#0b4f86;color:#fff;display:flex;align-items:center;gap:36px;padding:0 64px}
+footer .qr{background:#fff;border-radius:22px;padding:12px}footer .qr img{width:200px;display:block}
+footer h2{font:800 50px/1.05 "Baloo 2";color:#f6c933}
+footer p{font:700 28px/1.3 Nunito;margin-top:8px}
+footer .url{font:800 26px Nunito;background:#f6c933;color:#4a2810;border-radius:999px;padding:8px 22px;display:inline-block;margin-top:12px}
+</style></head><body>
+<div class="sol"></div><span class="st" style="left:560px;top:60px;font-size:34px">✦</span><span class="st" style="left:1000px;top:230px;font-size:26px">✧</span><span class="st" style="left:520px;top:200px;font-size:22px">✦</span>
+<header><img src="_logo.png" alt=""><div><span class="selo">NATAL SOLIDÁRIO</span><h1>Sorteio Natalino<span>Luiz Manni Amig@s da Rua</span></h1></div></header>
+<div class="preco"><p>200 números<br>4 prêmios<br>1 Natal mais feliz</p><div><b>R$ 10</b><em>cada número</em></div></div>
+<div class="titulo">Concorra a 4 prêmios</div>
+<div class="grade">
+<div class="p"><img src="../assets/premio1-maraca.jpg"><div><small>1º prêmio</small><strong>Maracá</strong></div></div>
+<div class="p"><img src="../assets/premio2-mandala.jpg"><div><small>2º prêmio</small><strong>Mandala + caixa de joias</strong></div></div>
+<div class="p"><img src="../assets/premio3-bone-caneca.jpg"><div><small>3º prêmio</small><strong>Boné + caneca Amigos da Rua</strong></div></div>
+<div class="p k"><img src="../assets/premio4-kit.svg"><div><small>4º prêmio</small><strong>Copaíba, andiroba, vela aromática + plant hanger de macramê</strong></div></div>
+</div>
+<footer><div class="qr"><img src="_qr.png" alt=""></div>
+<div><h2>Escolha seu número e ajude nas ações de Natal!</h2><p>Pague por PIX e envie o comprovante a um integrante dos Amigos da Rua.</p><span class="url">damasio23.github.io/rifa-natalina-amigos-da-rua</span></div></footer>
+</body></html>

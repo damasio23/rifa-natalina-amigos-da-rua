@@ -18,9 +18,9 @@ window.RIFA = {
   total: 200, preco: 10, chavePix: "amigosdarua.cdm@gmail.com",
   // Alterar aqui muda os prêmios em todo o site e no sorteio
   premios: [
-    { n: 1, titulo: "Maracá", icone: "🪘" },
-    { n: 2, titulo: "Mandala + caixa de joias", icone: "🌀" },
-    { n: 3, titulo: "Boné + caneca Amigos da Rua", icone: "🧢" },
-    { n: 4, titulo: "Copaíba + andiroba + vela aromática + plant hanger de macramê", icone: "🕯️" }
+    { n: 1, titulo: "Maracá", icone: "🪘", img: "assets/premio1-maraca.jpg" },
+    { n: 2, titulo: "Mandala + caixa de joias", icone: "🌀", img: "assets/premio2-mandala.jpg" },
+    { n: 3, titulo: "Boné + caneca Amigos da Rua", icone: "🧢", img: "assets/premio3-bone-caneca.jpg" },
+    { n: 4, titulo: "Copaíba + andiroba + vela aromática + plant hanger de macramê", icone: "🕯️", img: "assets/premio4-kit.svg", ilustrativo: true }
   ]
 };
